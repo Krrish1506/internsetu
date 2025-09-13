@@ -1,0 +1,62 @@
+.slider-overlay {
+    position: relative;
+    z-index: 1;
+}
+
+.slider-overlay::after {
+    content: "";
+    background-color: rgba(0, 0, 0, .9);
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.slider--item {
+    min-height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.slider--item1 {
+    background-image: url(../images/growify-digital-chattarpur-delhi-marketing-agencies-1bzgphuig9.jpg.avif);
+}
+
+.slider--item2 {
+    background-image: url(../images/URJA_bg_image.jpeg);
+}
+
+.slider--item3 {
+    background-image: url(../images/Hooman_Digital_bg_image.webp);
+}
+
+.slider--item4 {
+    background-image: url(../images/TechDome_bg_image.jpg);
+}
+
+.slider--item5 {
+    background-image: url(../images/Youth_Marketer_bg_image.jpg);
+}
+
+.slider--content {
+    position: relative;
+    place-content: center;
+    z-index: 1;
+}
+
+.slider--company__logo {
+    object-fit: contain;
+}
+
+.slider--description {
+    max-width: 600px;
+}
+
+.slider--icon {
+    color: black;
+}

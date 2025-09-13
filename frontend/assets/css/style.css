@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 1280px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cabin-fonts {
+    font-family: "Cabin", sans-serif;
+}
+
+.navbar {
+    border-radius: 0 10px 10px 0;
+}
+
+.site__header--logo {
+    object-fit: contain;
+}
+
+.site__header--menu-list {
+    display: flex;
+    gap: 50px;
+}
+
+.menu__item-link-active {
+    color: rgb(255, 165, 0);
+    font-weight: 600;
+}
+
+.contact--icon {
+    margin: 0 0 0 7px;
+}

@@ -1,0 +1,16 @@
+﻿student_id,cgpa,degree,department,skills,projects
+S1,7.5,BA,CE,"Finance,Embedded,Marketing,IoT,Python",5
+S2,7.73,B.Tech,Design,"Embedded,HR,Web Dev,AI,Networking,Java",2
+S3,7.22,M.Tech,ECE,"iOS,Cybersecurity,Data Analysis,Finance,Marketing,Design",2
+S4,9.1,B.Sc,Design,"Web Dev,C++,HR,Testing",5
+S5,9.21,B.Tech,HR,"ML,Embedded,Web Dev,IoT,Java",4
+S6,9.45,BA,ECE,"Android,ML,IoT",2
+S7,6.1,BBA,Finance,"AI,Marketing,Python",4
+S8,9.21,MBA,Design,"Management,Cloud,Embedded,Marketing,ML",1
+S9,7.62,B.Tech,Design,"Cybersecurity,Management,Marketing,Design,Android,Web Dev",3
+S10,8.72,M.Tech,Design,"Cybersecurity,Networking,Embedded,Cloud,Finance,Python",5
+S11,9.43,MBA,EEE,"HR,Data Analysis,ML,Testing",2
+S12,9.93,MBA,CSE,"Design,Java,Embedded,Networking",4
+S13,9.59,MBA,EEE,"IoT,Management,AI,Design,Android,Marketing",4
+S14,8.04,BCA,Finance,"iOS,Cloud,Android,Testing",3
+S15,8.29,B.Tech,CSE,"Design,Java,HR,Management,Marketing,Android",2

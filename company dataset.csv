@@ -1,0 +1,11 @@
+﻿company,departments,skills_required,min_cgpa,min_projects
+Company_1,"IT,CE,EEE","ML,Networking,Testing,C++",6.95,2
+Company_2,"ME,IT","Cybersecurity,iOS,Finance,Web Dev",6.64,1
+Company_3,ME,"Design,Marketing",6.01,0
+Company_4,"Finance,EEE","iOS,IoT,Python",6.33,2
+Company_5,ME,"Cybersecurity,HR,Embedded",6.98,0
+Company_6,"Design,EEE","Design,HR,Web Dev,Marketing",6.5,1
+Company_7,"Design,Marketing","AI,Marketing,Management",7,1
+Company_8,ECE,"iOS,Embedded,Finance,Marketing",6.3,1
+Company_9,IT,"Java,Cloud,Cybersecurity",6.5,2
+Company_10,"ECE,Finance","iOS,Testing,Android",6,1

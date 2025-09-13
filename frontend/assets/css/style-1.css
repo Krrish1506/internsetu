@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 1280px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.site-header {
+    background-color: var(--bg-color-1);
+    border-radius: 0 0 var(--border-radius-2) var(--border-radius-2);
+    z-index: 100;
+}
+
+.sticky-top {
+    box-shadow: -3px -7px 25px rgb(172, 172, 172);
+}
+
+.cabin-fonts {
+    font-family: "Cabin", sans-serif;
+}
+
+.navbar {
+    border-radius: 0 10px 10px 0;
+}
+
+.site__header--logo,
+.site__footer--logo {
+    object-fit: contain;
+    height: 70px;
+    width: 125px;
+}
+
+/* .site__header--menu-list {
+    display: flex;
+    gap: 50px;
+} */
+
+.menu__item-link-active {
+    color: rgb(255, 165, 0);
+    font-weight: 600;
+}
+
+.site__header--menu-list {
+    display: flex;
+    gap: 50px;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse.collapse.show {
+        display: block !important;
+        position: absolute;
+        top: 60px; /* adjust based on your header height */
+        right: 15px; /* aligns it under hamburger */
+        background-color: var(--bg-color-1);
+        padding: 15px;
+        border-radius: var(--border-radius-2);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .site__header--menu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sign-up--btn {
+        width: auto;
+        text-align: center;
+    }
+}
+
+
+
+.contact--icon {
+    margin: 0 0 0 7px;
+}
+
+.sign-up-form {
+    display: none;
+}
+
+.section--heading {
+    text-shadow: 2px 2px 7px #FFBD42;
+}
+
+.full-banner-section__img {
+    object-fit: contain;
+    height: 520px;
+    width: 520px;
+}
+
+.company--menu {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+}
+
+.companies--logo {
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+}
+
+footer {
+    /* background-color: #dedede; */
+    background-color: #fcead3;
+}
+
+.footer--content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer--internship-companies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.footer--internship-companies__logo {
+    object-fit: contain;
+}
+
+.footer--menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.dashboard-card {
+    background-color: var(--bg-color-7);
+    border-radius: var(--border-radius-5);
+    padding: 15px 20px;
+}
+
+
+/* Krrish */
+.menu--list {
+    background-color: var(--bg-color-8);
+    border-radius: var(--border-radius-5);
+    box-shadow: -0.008px -3px 20px 2px #dbdbdb;
+    text-align: center;
+    padding: 10px;
+}
+
+/* @media screen and (max-width: 992px) {
+    .site__header--menu-list {
+        display: grid;
+    }
+
+    .site__header--menu {
+        display: block;
+    }    
+} */
+
+@media screen and (max-width: 991px) {
+    .hero--section__content {
+        flex-wrap: wrap;
+    }
+}

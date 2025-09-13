@@ -1,0 +1,168 @@
+<!-- after login Home -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Home After Login</title>
+    <!-- Bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- slick slider css cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- jQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./assets/js/slick-slider.js"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/style-1.css" />
+    <link rel="stylesheet" href="./assets/css/slick-slider.css" />
+
+    <!-- Font Family: Merriweather(Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Family: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="cabin-fonts sticky-top">
+        <div class="site-header">
+            <nav class="navbar navbar-expand-lg">
+                <div class="main-container navbar-menu d-flex justify-content-between align-items-center">
+
+                    <!-- Logo -->
+                    <a href="#" class="navbar-brand m-0 p-0">
+                        <img src="./assets/images/Site-Logo.png" alt="Site Logo" class="site__header--logo">
+                    </a>
+
+                    <!-- Hamburger button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Collapsible menu -->
+                    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                        <ul class="site__header--menu-list m-0 p-0" type="none">
+                            <li class="menu__item">
+                                <a href="{{ url_for('home') }}" class="menu__item-link menu__item-link-active">HOME</a>
+                            </li>
+                            <!-- <li class="menu__item">
+                                <a href="{{ url_for('application') }}" class="site__btn-3">APPLICATION</a>
+                            </li> -->
+                            <li class="menu__item">
+                                <a href="{{ url_for('alprofile') }}" class="menu__item-link">PROFILE</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Welcome Section -->
+        <section class="section__padding after-login--linear__bg">
+            <div class="main-container d-flex flex-wrap">
+                <div>
+                    <h1 class="mb-3">Welcome, <span class="usrNameAppend" style="color:#FFD700;"></span>!</h1>
+                    <p class="mb-4">Ready to find your dream internship? Explore new opportunities, track your
+                        applications,
+                        and grow your career with us.</p>
+                    <a href="#internships" class="site__btn-2">Browse Internships</a>
+                </div>
+                <img src="./assets/images/Full-banner-img.png" alt="Welcome Banner" class="img-fluid d-none d-md-block"
+                    style="max-height:180px; border-radius:1rem;" />
+            </div>
+        </section>
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard-cards--menu section__padding row text-center">
+            <div class="main-container d-flex gap-3">
+                <div class="col-md-4 mb-3">
+                    <div class="dashboard-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h4 class="mt-2">Applied</h4>
+                        <p class="mb-0">Not Applied Yet</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="dashboard-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h4 class="mt-2">Selected</h4>
+                        <p class="mb-0">Not selected yet</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="dashboard-card">
+                        <i class="fas fa-user"></i>
+                        <h4 class="mt-2">Profile</h4>
+                        <p class="mb-0">Complete your profile</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Internships -->
+        <section id="internships" class="internship-section">
+            <h2 class="mb-4" style="color:#1A202C;">Recommended Internships</h2>
+            <div class="internship-card">
+                <img src="./assets/images/Growify_white_logo.png.avif" alt="Growify Logo" />
+                <div>
+                    <h5 class="mb-1">Web Development Intern</h5>
+                    <p class="mb-1"><strong>Company:</strong> Growify</p>
+                    <p class="mb-1"><strong>Location:</strong> New Delhi</p>
+                    <p class="mb-2"><strong>Skills:</strong> JavaScript, React</p>
+                    <a href="#" class="site__btn-2 btn-sm">Apply Now</a>
+                </div>
+            </div>
+            <div class="internship-card">
+                <img src="./assets/images/URJA_Logo.png" alt="URJA Logo" />
+                <div>
+                    <h5 class="mb-1">Backend Developer Intern</h5>
+                    <p class="mb-1"><strong>Company:</strong> URJA</p>
+                    <p class="mb-1"><strong>Location:</strong> Mumbai</p>
+                    <p class="mb-2"><strong>Skills:</strong> PHP, Laravel, MySQL</p>
+                    <a href="#" class="site__btn-2 btn-sm">Apply Now</a>
+                </div>
+            </div>
+            <div class="internship-card">
+                <img src="./assets/images/TechDome_Logo.png" alt="TechDome Logo" />
+                <div>
+                    <h5 class="mb-1">Business Analyst Intern</h5>
+                    <p class="mb-1"><strong>Company:</strong> TechDome</p>
+                    <p class="mb-1"><strong>Location:</strong> Indore, Hyderabad</p>
+                    <p class="mb-2"><strong>Skills:</strong> Business Analysis, CRM</p>
+                    <a href="#" class="site__btn-2 btn-sm">Apply Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
