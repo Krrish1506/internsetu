@@ -141,6 +141,11 @@ footer {
     padding: 15px 20px;
 }
 
+.dashboard-cards--menu__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+}
+
 
 /* Krrish */
 .menu--list {

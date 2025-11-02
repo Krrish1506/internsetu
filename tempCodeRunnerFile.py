@@ -57,8 +57,8 @@ def close_db(exception):
 # ROUTES
 # ------------------------------
 @app.route('/')
-def index():
-    return render_template('index.html')
+def home():
+    return render_template('home.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -160,9 +160,9 @@ def dbtest():
 def signup():
     return render_template('sign_up.html')
 
-@app.route('/alindex')
-def alindex():
-    return render_template('alindex.html')
+@app.route('/alhome')
+def alhome():
+    return render_template('alhome.html')
 
 @app.route('/alprofile')
 def alprofile():

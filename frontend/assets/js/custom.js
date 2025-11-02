@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.location.href = "{{ url_for('recommend') }}";
             } else if (text === 'Dashboard') {
                 e.preventDefault();
-                window.location.href = "{{ url_for('alhome') }}";
+                window.location.href = "{{ url_for('alindex') }}";
             } else if (text.startsWith('Logout')) {
                 e.preventDefault();
                 if (confirm('Are you sure you want to logout?')) {
                     // Redirect to login page or home
-                    window.location.href = "{{ url_for('home') }}";
+                    window.location.href = "{{ url_for('index') }}";
                 }
             }
         });
@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (isLoggedIn === 'true') {
             // User is logged in → Redirect to alhome.html
-            window.location.href = "{{ url_for('alhome') }}";
+            window.location.href = "{{ url_for('alindex') }}";
         } else {
             // User is not logged in → Redirect to home.html
-            window.location.href = "{{ url_for('home') }}";
+            window.location.href = "{{ url_for('index') }}";
         }
     }
 

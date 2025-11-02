@@ -4,55 +4,164 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>My Applications | Internship Portal</title>
+    
+    <!-- Bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="./assets/css/global.css"/>
-    <link rel="stylesheet" href="./assets/css/style-1.css"/>
-    <script src="./assets/js/custom.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-1.css') }}"/>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #1A202C 0%, #FFD700 100%);
+            min-height: 100vh;
+        }
+        .applications-wrapper {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 2px 16px rgba(26,32,44,0.10);
+            padding: 2rem;
+            margin: 2rem auto;
+        }
+        .table {
+            margin-bottom: 0;
+        }
+        .table th {
+            background: #1A202C;
+            color: white;
+            font-weight: 600;
+        }
+        .badge {
+            font-weight: 500;
+            padding: 0.5em 1em;
+        }
+        .page-title {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+    </style>
 </head>
-<body style="background:#E2E8F0;">
-    <header class="student-header" style="background:#1A202C;color:#fff;padding:1rem 0;">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url_for('alhome') }}">
-                    <img src="{{ url_for('static', filename='images/Site-Logo.png') }}" alt="Site Logo" style="height:40px;"/>
-                </a>
-                <ul class="navbar-nav ms-auto d-flex align-items-center">
-                    <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('alhome') }}">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link active text-white" href="{{ url_for('application') }}">My Applications</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('alprofile') }}">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="{{ url_for('login') }}">Logout <i class="fas fa-sign-out-alt"></i></a></li>
-                </ul>
-            </div>
-        </nav>
+<body>
+    <!-- Header -->
+    <header class="cabin-fonts sticky-top">
+        <div class="site-header">
+            <nav class="navbar navbar-expand-lg">
+                <div class="main-container navbar-menu d-flex justify-content-between align-items-center">
+                    <!-- Logo -->
+                    <a href="{{ url_for('alindex') }}" class="navbar-brand m-0 p-0">
+                        <img src="{{ url_for('static', filename='images/Site-Logo.png') }}" alt="Site Logo" class="site__header--logo">
+                    </a>
+
+                    <!-- Hamburger button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Collapsible menu -->
+                    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                        <ul class="site__header--menu-list m-0 p-0" type="none">
+                            <li class="menu__item">
+                                <a href="{{ url_for('alindex') }}" class="menu__item-link">HOME</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="{{ url_for('application') }}" class="menu__item-link menu__item-link-active">APPLICATIONS</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="{{ url_for('alprofile') }}" class="menu__item-link">PROFILE</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="{{ url_for('login') }}" class="menu__item-link">LOGOUT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
+
     <main class="container py-5">
-        <h2 class="mb-4">My Applications</h2>
-        <table class="table table-bordered bg-white">
-            <thead>
-                <tr>
-                    <th>Internship</th>
-                    <th>Company</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Web Development Intern</td>
-                    <td>Growify</td>
-                    <td><span class="badge bg-success">Applied</span></td>
-                </tr>
-                <tr>
-                    <td>Backend Developer Intern</td>
-                    <td>URJA</td>
-                    <td><span class="badge bg-warning text-dark">In Review</span></td>
-                </tr>
-                <tr>
-                    <td>Business Analyst Intern</td>
-                    <td>TechDome</td>
-                    <td><span class="badge bg-info text-dark">Selected</span></td>
-                </tr>
-            </tbody>
-        </table>
+        <h1 class="page-title">My Applications</h1>
+        <div class="applications-wrapper">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Internship Position</th>
+                        <th>Company</th>
+                        <th>Applied Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development Intern</td>
+                        <td>Growify</td>
+                        <td>2024-03-01</td>
+                        <td><span class="badge bg-success">Applied</span></td>
+                        <td><a href="#" class="btn btn-sm btn-outline-primary">View Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>Backend Developer Intern</td>
+                        <td>URJA</td>
+                        <td>2024-02-28</td>
+                        <td><span class="badge bg-warning text-dark">In Review</span></td>
+                        <td><a href="#" class="btn btn-sm btn-outline-primary">View Details</a></td>
+                    </tr>
+                    <tr>
+                        <td>Business Analyst Intern</td>
+                        <td>TechDome</td>
+                        <td>2024-02-25</td>
+                        <td><span class="badge bg-info text-dark">Selected</span></td>
+                        <td><a href="#" class="btn btn-sm btn-outline-primary">View Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
+
+    <footer class="pt-4">
+        <div class="main-container mb-4">
+            <div class="d-grid footer--content">
+                <div>
+                    <img src="{{ url_for('static', filename='images/Site-Logo.png') }}" alt="Intern Setu Logo" class="navbar-brand site__footer--logo">
+                    <p>Your gateway to meaningful internships</p>
+                </div>
+            </div>
+            <div class="d-grid">
+                <div class="footer--menu">
+                    <div>
+                        <p class="fw-bold mb-3">Contact</p>
+                        <ul class="m-0 p-0" type="none">
+                            <li class="mb-2">
+                                <a href="mailto:contact@internsetu.com"><i class="far fa-envelope"></i> contact@internsetu.com</a>
+                            </li>
+                            <li>
+                                <a href="tel:+911234567890"><i class="fas fa-phone"></i> +91 123 456 7890</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyrights bg__color-1 p-4 text-center">
+            <p>© 2025 Government of India. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
